@@ -25,18 +25,15 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - CocoaSecurity (1.2.4)
 
 DEPENDENCIES:
   - AFDownloadRequestOperation
   - AFNetworkActivityLogger
   - AFNetworking
-  - CocoaSecurity
 
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
 
 COCOAPODS: 0.38.2

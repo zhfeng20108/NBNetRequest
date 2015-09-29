@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CocoaSecurity.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>10FFFA136F1AA2A475C91A775ECB9519</key>
+		<key>39705FC4E277EDD507963B2A12B2059F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>19BCD177A2907EF995B3F33460AA1CCB</key>
+		<key>518DFF824B3E423D9CAEFA3F2E9CEF32</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>22AD08E89DBD285E2E038F3581CC87A8</key>
+		<key>70D89C8F58BA91DBE0B4B7E6D788DFD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63C09A9156691626B0122D63D4A58286</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A070BCDE42B5EB0587E60E3B5BB4963E</key>
+		<key>A4B29ABA4DA76C6F7BE0004D9BFA83DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

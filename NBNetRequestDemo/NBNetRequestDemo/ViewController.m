@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "NBNetRequest.h"
 #import "ZFNetReuqestModel.h"
-#import <CocoaSecurity/CocoaSecurity.h>
 #import "ZFCurrentUser.h"
 #import "NBNetworkConfig.h"
 @interface ViewController ()

@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25E1F2E51BB91B6D00EAB928 /* ZFNetReuqestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E1F2E41BB91B6D00EAB928 /* ZFNetReuqestModel.m */; settings = {ASSET_TAGS = (); }; };
+		25E1F2E81BB91E0800EAB928 /* ZFCurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E1F2E71BB91E0800EAB928 /* ZFCurrentUser.m */; settings = {ASSET_TAGS = (); }; };
+		25E83E841BB5614B009BB57B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83E831BB5614B009BB57B /* main.m */; };
+		25E83E871BB5614B009BB57B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83E861BB5614B009BB57B /* AppDelegate.m */; };
+		25E83E8A1BB5614B009BB57B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83E891BB5614B009BB57B /* ViewController.m */; };
+		25E83E8D1BB5614B009BB57B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E83E8B1BB5614B009BB57B /* Main.storyboard */; };
+		25E83E8F1BB5614B009BB57B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E83E8E1BB5614B009BB57B /* Assets.xcassets */; };
+		25E83E921BB5614B009BB57B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E83E901BB5614B009BB57B /* LaunchScreen.storyboard */; };
+		25E83E9D1BB5614B009BB57B /* NBNetRequestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83E9C1BB5614B009BB57B /* NBNetRequestDemoTests.m */; };
+		25E83EA81BB5614B009BB57B /* NBNetRequestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EA71BB5614B009BB57B /* NBNetRequestDemoUITests.m */; };
+		25E83ECA1BB56291009BB57B /* NBBaseNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EB71BB56291009BB57B /* NBBaseNetRequest.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ECB1BB56291009BB57B /* NBBatchNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EB91BB56291009BB57B /* NBBatchNetRequest.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ECC1BB56291009BB57B /* NBBatchNetRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EBB1BB56291009BB57B /* NBBatchNetRequestAgent.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ECD1BB56291009BB57B /* NBChainNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EBD1BB56291009BB57B /* NBChainNetRequest.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ECE1BB56291009BB57B /* NBChainNetRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EBF1BB56291009BB57B /* NBChainNetRequestAgent.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ECF1BB56291009BB57B /* NBNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC11BB56291009BB57B /* NBNetRequest.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ED01BB56291009BB57B /* NBNetRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC31BB56291009BB57B /* NBNetRequestModel.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ED11BB56291009BB57B /* NBNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC51BB56291009BB57B /* NBNetworkAgent.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ED21BB56291009BB57B /* NBNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC71BB56291009BB57B /* NBNetworkConfig.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ED31BB56291009BB57B /* NBNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC91BB56291009BB57B /* NBNetworkPrivate.m */; settings = {ASSET_TAGS = (); }; };
+		3DF0DAF5737222E545503066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC31B55CD08C532E95CFE9D /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25E83E991BB5614B009BB57B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25E83E771BB5614B009BB57B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25E83E7E1BB5614B009BB57B;
+			remoteInfo = NBNetRequestDemo;
+		};
+		25E83EA41BB5614B009BB57B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25E83E771BB5614B009BB57B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25E83E7E1BB5614B009BB57B;
+			remoteInfo = NBNetRequestDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25E1F2E31BB91B6D00EAB928 /* ZFNetReuqestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFNetReuqestModel.h; sourceTree = "<group>"; };
+		25E1F2E41BB91B6D00EAB928 /* ZFNetReuqestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFNetReuqestModel.m; sourceTree = "<group>"; };
+		25E1F2E61BB91E0800EAB928 /* ZFCurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCurrentUser.h; sourceTree = "<group>"; };
+		25E1F2E71BB91E0800EAB928 /* ZFCurrentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCurrentUser.m; sourceTree = "<group>"; };
+		25E83E7F1BB5614B009BB57B /* NBNetRequestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBNetRequestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E83E831BB5614B009BB57B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		25E83E851BB5614B009BB57B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		25E83E861BB5614B009BB57B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		25E83E881BB5614B009BB57B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		25E83E891BB5614B009BB57B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		25E83E8C1BB5614B009BB57B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25E83E8E1BB5614B009BB57B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25E83E911BB5614B009BB57B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		25E83E931BB5614B009BB57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25E83E981BB5614B009BB57B /* NBNetRequestDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBNetRequestDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E83E9C1BB5614B009BB57B /* NBNetRequestDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBNetRequestDemoTests.m; sourceTree = "<group>"; };
+		25E83E9E1BB5614B009BB57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25E83EA31BB5614B009BB57B /* NBNetRequestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBNetRequestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E83EA71BB5614B009BB57B /* NBNetRequestDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBNetRequestDemoUITests.m; sourceTree = "<group>"; };
+		25E83EA91BB5614B009BB57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25E83EB61BB56291009BB57B /* NBBaseNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBBaseNetRequest.h; sourceTree = "<group>"; };
+		25E83EB71BB56291009BB57B /* NBBaseNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBBaseNetRequest.m; sourceTree = "<group>"; };
+		25E83EB81BB56291009BB57B /* NBBatchNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBBatchNetRequest.h; sourceTree = "<group>"; };
+		25E83EB91BB56291009BB57B /* NBBatchNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBBatchNetRequest.m; sourceTree = "<group>"; };
+		25E83EBA1BB56291009BB57B /* NBBatchNetRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBBatchNetRequestAgent.h; sourceTree = "<group>"; };
+		25E83EBB1BB56291009BB57B /* NBBatchNetRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBBatchNetRequestAgent.m; sourceTree = "<group>"; };
+		25E83EBC1BB56291009BB57B /* NBChainNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBChainNetRequest.h; sourceTree = "<group>"; };
+		25E83EBD1BB56291009BB57B /* NBChainNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBChainNetRequest.m; sourceTree = "<group>"; };
+		25E83EBE1BB56291009BB57B /* NBChainNetRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBChainNetRequestAgent.h; sourceTree = "<group>"; };
+		25E83EBF1BB56291009BB57B /* NBChainNetRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBChainNetRequestAgent.m; sourceTree = "<group>"; };
+		25E83EC01BB56291009BB57B /* NBNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetRequest.h; sourceTree = "<group>"; };
+		25E83EC11BB56291009BB57B /* NBNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetRequest.m; sourceTree = "<group>"; };
+		25E83EC21BB56291009BB57B /* NBNetRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetRequestModel.h; sourceTree = "<group>"; };
+		25E83EC31BB56291009BB57B /* NBNetRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetRequestModel.m; sourceTree = "<group>"; };
+		25E83EC41BB56291009BB57B /* NBNetworkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetworkAgent.h; sourceTree = "<group>"; };
+		25E83EC51BB56291009BB57B /* NBNetworkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetworkAgent.m; sourceTree = "<group>"; };
+		25E83EC61BB56291009BB57B /* NBNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetworkConfig.h; sourceTree = "<group>"; };
+		25E83EC71BB56291009BB57B /* NBNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetworkConfig.m; sourceTree = "<group>"; };
+		25E83EC81BB56291009BB57B /* NBNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetworkPrivate.h; sourceTree = "<group>"; };
+		25E83EC91BB56291009BB57B /* NBNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetworkPrivate.m; sourceTree = "<group>"; };
+		3CC31B55CD08C532E95CFE9D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FAC4E148D9BF190EF4E861D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		995D649E942BD25FB5476C22 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25E83E7C1BB5614B009BB57B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF0DAF5737222E545503066 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E83E951BB5614B009BB57B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E83EA01BB5614B009BB57B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11B13F5F886FC2B3569B59B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CC31B55CD08C532E95CFE9D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25E83E761BB5614B009BB57B = {
+			isa = PBXGroup;
+			children = (
+				25E83EB51BB56291009BB57B /* NBNetRequest */,
+				25E83E811BB5614B009BB57B /* NBNetRequestDemo */,
+				25E83E9B1BB5614B009BB57B /* NBNetRequestDemoTests */,
+				25E83EA61BB5614B009BB57B /* NBNetRequestDemoUITests */,
+				25E83E801BB5614B009BB57B /* Products */,
+				EA03751472557A38D24ACC3F /* Pods */,
+				11B13F5F886FC2B3569B59B6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		25E83E801BB5614B009BB57B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25E83E7F1BB5614B009BB57B /* NBNetRequestDemo.app */,
+				25E83E981BB5614B009BB57B /* NBNetRequestDemoTests.xctest */,
+				25E83EA31BB5614B009BB57B /* NBNetRequestDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25E83E811BB5614B009BB57B /* NBNetRequestDemo */ = {
+			isa = PBXGroup;
+			children = (
+				25E83E851BB5614B009BB57B /* AppDelegate.h */,
+				25E83E861BB5614B009BB57B /* AppDelegate.m */,
+				25E83E881BB5614B009BB57B /* ViewController.h */,
+				25E83E891BB5614B009BB57B /* ViewController.m */,
+				25E1F2E31BB91B6D00EAB928 /* ZFNetReuqestModel.h */,
+				25E1F2E41BB91B6D00EAB928 /* ZFNetReuqestModel.m */,
+				25E1F2E61BB91E0800EAB928 /* ZFCurrentUser.h */,
+				25E1F2E71BB91E0800EAB928 /* ZFCurrentUser.m */,
+				25E83E8B1BB5614B009BB57B /* Main.storyboard */,
+				25E83E8E1BB5614B009BB57B /* Assets.xcassets */,
+				25E83E901BB5614B009BB57B /* LaunchScreen.storyboard */,
+				25E83E931BB5614B009BB57B /* Info.plist */,
+				25E83E821BB5614B009BB57B /* Supporting Files */,
+			);
+			path = NBNetRequestDemo;
+			sourceTree = "<group>";
+		};
+		25E83E821BB5614B009BB57B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				25E83E831BB5614B009BB57B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25E83E9B1BB5614B009BB57B /* NBNetRequestDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				25E83E9C1BB5614B009BB57B /* NBNetRequestDemoTests.m */,
+				25E83E9E1BB5614B009BB57B /* Info.plist */,
+			);
+			path = NBNetRequestDemoTests;
+			sourceTree = "<group>";
+		};
+		25E83EA61BB5614B009BB57B /* NBNetRequestDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				25E83EA71BB5614B009BB57B /* NBNetRequestDemoUITests.m */,
+				25E83EA91BB5614B009BB57B /* Info.plist */,
+			);
+			path = NBNetRequestDemoUITests;
+			sourceTree = "<group>";
+		};
+		25E83EB51BB56291009BB57B /* NBNetRequest */ = {
+			isa = PBXGroup;
+			children = (
+				25E83EB61BB56291009BB57B /* NBBaseNetRequest.h */,
+				25E83EB71BB56291009BB57B /* NBBaseNetRequest.m */,
+				25E83EB81BB56291009BB57B /* NBBatchNetRequest.h */,
+				25E83EB91BB56291009BB57B /* NBBatchNetRequest.m */,
+				25E83EBA1BB56291009BB57B /* NBBatchNetRequestAgent.h */,
+				25E83EBB1BB56291009BB57B /* NBBatchNetRequestAgent.m */,
+				25E83EBC1BB56291009BB57B /* NBChainNetRequest.h */,
+				25E83EBD1BB56291009BB57B /* NBChainNetRequest.m */,
+				25E83EBE1BB56291009BB57B /* NBChainNetRequestAgent.h */,
+				25E83EBF1BB56291009BB57B /* NBChainNetRequestAgent.m */,
+				25E83EC01BB56291009BB57B /* NBNetRequest.h */,
+				25E83EC11BB56291009BB57B /* NBNetRequest.m */,
+				25E83EC21BB56291009BB57B /* NBNetRequestModel.h */,
+				25E83EC31BB56291009BB57B /* NBNetRequestModel.m */,
+				25E83EC41BB56291009BB57B /* NBNetworkAgent.h */,
+				25E83EC51BB56291009BB57B /* NBNetworkAgent.m */,
+				25E83EC61BB56291009BB57B /* NBNetworkConfig.h */,
+				25E83EC71BB56291009BB57B /* NBNetworkConfig.m */,
+				25E83EC81BB56291009BB57B /* NBNetworkPrivate.h */,
+				25E83EC91BB56291009BB57B /* NBNetworkPrivate.m */,
+			);
+			name = NBNetRequest;
+			path = ../NBNetRequest;
+			sourceTree = "<group>";
+		};
+		EA03751472557A38D24ACC3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				995D649E942BD25FB5476C22 /* Pods.debug.xcconfig */,
+				5FAC4E148D9BF190EF4E861D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25E83E7E1BB5614B009BB57B /* NBNetRequestDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25E83EAC1BB5614B009BB57B /* Build configuration list for PBXNativeTarget "NBNetRequestDemo" */;
+			buildPhases = (
+				67E57D0C8A825D3F72EC53F1 /* Check Pods Manifest.lock */,
+				25E83E7B1BB5614B009BB57B /* Sources */,
+				25E83E7C1BB5614B009BB57B /* Frameworks */,
+				25E83E7D1BB5614B009BB57B /* Resources */,
+				D6C2CACA0AF6A4626490AE66 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NBNetRequestDemo;
+			productName = NBNetRequestDemo;
+			productReference = 25E83E7F1BB5614B009BB57B /* NBNetRequestDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25E83E971BB5614B009BB57B /* NBNetRequestDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25E83EAF1BB5614B009BB57B /* Build configuration list for PBXNativeTarget "NBNetRequestDemoTests" */;
+			buildPhases = (
+				25E83E941BB5614B009BB57B /* Sources */,
+				25E83E951BB5614B009BB57B /* Frameworks */,
+				25E83E961BB5614B009BB57B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25E83E9A1BB5614B009BB57B /* PBXTargetDependency */,
+			);
+			name = NBNetRequestDemoTests;
+			productName = NBNetRequestDemoTests;
+			productReference = 25E83E981BB5614B009BB57B /* NBNetRequestDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		25E83EA21BB5614B009BB57B /* NBNetRequestDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25E83EB21BB5614B009BB57B /* Build configuration list for PBXNativeTarget "NBNetRequestDemoUITests" */;
+			buildPhases = (
+				25E83E9F1BB5614B009BB57B /* Sources */,
+				25E83EA01BB5614B009BB57B /* Frameworks */,
+				25E83EA11BB5614B009BB57B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25E83EA51BB5614B009BB57B /* PBXTargetDependency */,
+			);
+			name = NBNetRequestDemoUITests;
+			productName = NBNetRequestDemoUITests;
+			productReference = 25E83EA31BB5614B009BB57B /* NBNetRequestDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25E83E771BB5614B009BB57B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = feng;
+				TargetAttributes = {
+					25E83E7E1BB5614B009BB57B = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					25E83E971BB5614B009BB57B = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 25E83E7E1BB5614B009BB57B;
+					};
+					25E83EA21BB5614B009BB57B = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 25E83E7E1BB5614B009BB57B;
+					};
+				};
+			};
+			buildConfigurationList = 25E83E7A1BB5614B009BB57B /* Build configuration list for PBXProject "NBNetRequestDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 25E83E761BB5614B009BB57B;
+			productRefGroup = 25E83E801BB5614B009BB57B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25E83E7E1BB5614B009BB57B /* NBNetRequestDemo */,
+				25E83E971BB5614B009BB57B /* NBNetRequestDemoTests */,
+				25E83EA21BB5614B009BB57B /* NBNetRequestDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25E83E7D1BB5614B009BB57B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E83E921BB5614B009BB57B /* LaunchScreen.storyboard in Resources */,
+				25E83E8F1BB5614B009BB57B /* Assets.xcassets in Resources */,
+				25E83E8D1BB5614B009BB57B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E83E961BB5614B009BB57B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E83EA11BB5614B009BB57B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67E57D0C8A825D3F72EC53F1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6C2CACA0AF6A4626490AE66 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25E83E7B1BB5614B009BB57B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E83ECA1BB56291009BB57B /* NBBaseNetRequest.m in Sources */,
+				25E1F2E51BB91B6D00EAB928 /* ZFNetReuqestModel.m in Sources */,
+				25E83ED11BB56291009BB57B /* NBNetworkAgent.m in Sources */,
+				25E83ECB1BB56291009BB57B /* NBBatchNetRequest.m in Sources */,
+				25E83E8A1BB5614B009BB57B /* ViewController.m in Sources */,
+				25E83E871BB5614B009BB57B /* AppDelegate.m in Sources */,
+				25E83ECF1BB56291009BB57B /* NBNetRequest.m in Sources */,
+				25E1F2E81BB91E0800EAB928 /* ZFCurrentUser.m in Sources */,
+				25E83ECD1BB56291009BB57B /* NBChainNetRequest.m in Sources */,
+				25E83ECE1BB56291009BB57B /* NBChainNetRequestAgent.m in Sources */,
+				25E83ED21BB56291009BB57B /* NBNetworkConfig.m in Sources */,
+				25E83ED31BB56291009BB57B /* NBNetworkPrivate.m in Sources */,
+				25E83ECC1BB56291009BB57B /* NBBatchNetRequestAgent.m in Sources */,
+				25E83E841BB5614B009BB57B /* main.m in Sources */,
+				25E83ED01BB56291009BB57B /* NBNetRequestModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E83E941BB5614B009BB57B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E83E9D1BB5614B009BB57B /* NBNetRequestDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E83E9F1BB5614B009BB57B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E83EA81BB5614B009BB57B /* NBNetRequestDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25E83E9A1BB5614B009BB57B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25E83E7E1BB5614B009BB57B /* NBNetRequestDemo */;
+			targetProxy = 25E83E991BB5614B009BB57B /* PBXContainerItemProxy */;
+		};
+		25E83EA51BB5614B009BB57B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25E83E7E1BB5614B009BB57B /* NBNetRequestDemo */;
+			targetProxy = 25E83EA41BB5614B009BB57B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		25E83E8B1BB5614B009BB57B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E83E8C1BB5614B009BB57B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		25E83E901BB5614B009BB57B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E83E911BB5614B009BB57B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25E83EAA1BB5614B009BB57B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25E83EAB1BB5614B009BB57B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25E83EAD1BB5614B009BB57B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 995D649E942BD25FB5476C22 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NBNetRequestDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NBNetRequestDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		25E83EAE1BB5614B009BB57B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FAC4E148D9BF190EF4E861D /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NBNetRequestDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NBNetRequestDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		25E83EB01BB5614B009BB57B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NBNetRequestDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NBNetRequestDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBNetRequestDemo.app/NBNetRequestDemo";
+			};
+			name = Debug;
+		};
+		25E83EB11BB5614B009BB57B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NBNetRequestDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NBNetRequestDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBNetRequestDemo.app/NBNetRequestDemo";
+			};
+			name = Release;
+		};
+		25E83EB31BB5614B009BB57B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NBNetRequestDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NBNetRequestDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NBNetRequestDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		25E83EB41BB5614B009BB57B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NBNetRequestDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NBNetRequestDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NBNetRequestDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25E83E7A1BB5614B009BB57B /* Build configuration list for PBXProject "NBNetRequestDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E83EAA1BB5614B009BB57B /* Debug */,
+				25E83EAB1BB5614B009BB57B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25E83EAC1BB5614B009BB57B /* Build configuration list for PBXNativeTarget "NBNetRequestDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E83EAD1BB5614B009BB57B /* Debug */,
+				25E83EAE1BB5614B009BB57B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25E83EAF1BB5614B009BB57B /* Build configuration list for PBXNativeTarget "NBNetRequestDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E83EB01BB5614B009BB57B /* Debug */,
+				25E83EB11BB5614B009BB57B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25E83EB21BB5614B009BB57B /* Build configuration list for PBXNativeTarget "NBNetRequestDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E83EB31BB5614B009BB57B /* Debug */,
+				25E83EB41BB5614B009BB57B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25E83E771BB5614B009BB57B /* Project object */;
+}

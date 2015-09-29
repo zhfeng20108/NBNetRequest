@@ -1,0 +1,7 @@
+
+pod 'AFNetworking'
+pod 'AFNetworkActivityLogger'
+pod 'AFDownloadRequestOperation'
+pod 'CocoaSecurity'
+
+

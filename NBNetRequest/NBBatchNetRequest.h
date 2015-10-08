@@ -22,7 +22,7 @@
 //  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "NBNetRequest.h"
+#import "NBBaseNetRequest.h"
 
 @class NBBatchNetRequest;
 @protocol NBBatchNetRequestDelegate <NSObject>

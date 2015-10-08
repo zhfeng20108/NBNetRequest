@@ -72,8 +72,6 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 
 @property (nonatomic, strong, readonly) NSString *responseString;
 
-@property (nonatomic, strong, readonly) id responseJSONObject;
-
 @property (nonatomic, readonly) NSInteger responseStatusCode;
 
 @property (nonatomic, copy) void (^successCompletionBlock)(NBBaseNetRequest *);
@@ -138,5 +136,20 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 - (AFDownloadProgressBlock)resumableDownloadProgressBlock;
 
 - (void)setResponseObject:(id)responseObject;
+- (id)responseJSONObject;
+
+
+
+/// 返回当前缓存的对象
+- (id)cacheJson;
+
+/// 是否当前的数据从缓存获得
+- (BOOL)isDataFromCache;
+
+/// 强制更新缓存
+- (void)startWithoutCache;
+
+/// 手动将其他请求的JsonResponse写入该请求的缓存
+- (void)saveJsonResponseToCacheFile:(id)jsonResponse;
 
 @end

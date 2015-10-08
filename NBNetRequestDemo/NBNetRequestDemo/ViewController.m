@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "NBNetRequest.h"
+#import "ZFNetRequest.h"
 #import "ZFNetReuqestModel.h"
 #import "ZFCurrentUser.h"
 #import "NBNetworkConfig.h"
@@ -23,7 +23,7 @@
     ZFNetReuqestModel *requestModel = [ZFNetReuqestModel modelWithPath:@"/data/sk/101010100.html"];
     requestModel.requestMethod = NBNetRequestMethodGet;
     requestModel.useAccount = NO;
-    [NBNetRequest startWithRequestModel:requestModel completionBlockWithSuccess:^(NBBaseNetRequest *request) {
+    [ZFNetRequest startWithRequestModel:requestModel completionBlockWithSuccess:^(NBBaseNetRequest *request) {
         NSLog(@"%@",[request responseJSONObject]);
         NSLog(@"%@",[request responseResultCode]);
 

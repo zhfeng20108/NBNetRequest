@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		259350FD1BC638F5004C18D7 /* ZFNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 259350FC1BC638F5004C18D7 /* ZFNetRequest.m */; settings = {ASSET_TAGS = (); }; };
 		25E1F2E51BB91B6D00EAB928 /* ZFNetReuqestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E1F2E41BB91B6D00EAB928 /* ZFNetReuqestModel.m */; settings = {ASSET_TAGS = (); }; };
 		25E1F2E81BB91E0800EAB928 /* ZFCurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E1F2E71BB91E0800EAB928 /* ZFCurrentUser.m */; settings = {ASSET_TAGS = (); }; };
 		25E83E841BB5614B009BB57B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83E831BB5614B009BB57B /* main.m */; };
@@ -22,7 +23,6 @@
 		25E83ECC1BB56291009BB57B /* NBBatchNetRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EBB1BB56291009BB57B /* NBBatchNetRequestAgent.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ECD1BB56291009BB57B /* NBChainNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EBD1BB56291009BB57B /* NBChainNetRequest.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ECE1BB56291009BB57B /* NBChainNetRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EBF1BB56291009BB57B /* NBChainNetRequestAgent.m */; settings = {ASSET_TAGS = (); }; };
-		25E83ECF1BB56291009BB57B /* NBNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC11BB56291009BB57B /* NBNetRequest.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ED01BB56291009BB57B /* NBNetRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC31BB56291009BB57B /* NBNetRequestModel.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ED11BB56291009BB57B /* NBNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC51BB56291009BB57B /* NBNetworkAgent.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ED21BB56291009BB57B /* NBNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC71BB56291009BB57B /* NBNetworkConfig.m */; settings = {ASSET_TAGS = (); }; };
@@ -48,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		259350FB1BC638F5004C18D7 /* ZFNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFNetRequest.h; sourceTree = "<group>"; };
+		259350FC1BC638F5004C18D7 /* ZFNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFNetRequest.m; sourceTree = "<group>"; };
 		25E1F2E31BB91B6D00EAB928 /* ZFNetReuqestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFNetReuqestModel.h; sourceTree = "<group>"; };
 		25E1F2E41BB91B6D00EAB928 /* ZFNetReuqestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFNetReuqestModel.m; sourceTree = "<group>"; };
 		25E1F2E61BB91E0800EAB928 /* ZFCurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCurrentUser.h; sourceTree = "<group>"; };
@@ -78,8 +80,6 @@
 		25E83EBD1BB56291009BB57B /* NBChainNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBChainNetRequest.m; sourceTree = "<group>"; };
 		25E83EBE1BB56291009BB57B /* NBChainNetRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBChainNetRequestAgent.h; sourceTree = "<group>"; };
 		25E83EBF1BB56291009BB57B /* NBChainNetRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBChainNetRequestAgent.m; sourceTree = "<group>"; };
-		25E83EC01BB56291009BB57B /* NBNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetRequest.h; sourceTree = "<group>"; };
-		25E83EC11BB56291009BB57B /* NBNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetRequest.m; sourceTree = "<group>"; };
 		25E83EC21BB56291009BB57B /* NBNetRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetRequestModel.h; sourceTree = "<group>"; };
 		25E83EC31BB56291009BB57B /* NBNetRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetRequestModel.m; sourceTree = "<group>"; };
 		25E83EC41BB56291009BB57B /* NBNetworkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetworkAgent.h; sourceTree = "<group>"; };
@@ -157,6 +157,8 @@
 				25E83E861BB5614B009BB57B /* AppDelegate.m */,
 				25E83E881BB5614B009BB57B /* ViewController.h */,
 				25E83E891BB5614B009BB57B /* ViewController.m */,
+				259350FB1BC638F5004C18D7 /* ZFNetRequest.h */,
+				259350FC1BC638F5004C18D7 /* ZFNetRequest.m */,
 				25E1F2E31BB91B6D00EAB928 /* ZFNetReuqestModel.h */,
 				25E1F2E41BB91B6D00EAB928 /* ZFNetReuqestModel.m */,
 				25E1F2E61BB91E0800EAB928 /* ZFCurrentUser.h */,
@@ -209,8 +211,6 @@
 				25E83EBD1BB56291009BB57B /* NBChainNetRequest.m */,
 				25E83EBE1BB56291009BB57B /* NBChainNetRequestAgent.h */,
 				25E83EBF1BB56291009BB57B /* NBChainNetRequestAgent.m */,
-				25E83EC01BB56291009BB57B /* NBNetRequest.h */,
-				25E83EC11BB56291009BB57B /* NBNetRequest.m */,
 				25E83EC21BB56291009BB57B /* NBNetRequestModel.h */,
 				25E83EC31BB56291009BB57B /* NBNetRequestModel.m */,
 				25E83EC41BB56291009BB57B /* NBNetworkAgent.h */,
@@ -404,9 +404,9 @@
 				25E83ECB1BB56291009BB57B /* NBBatchNetRequest.m in Sources */,
 				25E83E8A1BB5614B009BB57B /* ViewController.m in Sources */,
 				25E83E871BB5614B009BB57B /* AppDelegate.m in Sources */,
-				25E83ECF1BB56291009BB57B /* NBNetRequest.m in Sources */,
 				25E1F2E81BB91E0800EAB928 /* ZFCurrentUser.m in Sources */,
 				25E83ECD1BB56291009BB57B /* NBChainNetRequest.m in Sources */,
+				259350FD1BC638F5004C18D7 /* ZFNetRequest.m in Sources */,
 				25E83ECE1BB56291009BB57B /* NBChainNetRequestAgent.m in Sources */,
 				25E83ED21BB56291009BB57B /* NBNetworkConfig.m in Sources */,
 				25E83ED31BB56291009BB57B /* NBNetworkPrivate.m in Sources */,

@@ -38,8 +38,8 @@
     if (self) {
         _requestArray = [requestArray copy];
         _finishedCount = 0;
-        for (NBNetRequest * req in _requestArray) {
-            if (![req isKindOfClass:[NBNetRequest class]]) {
+        for (NBBaseNetRequest * req in _requestArray) {
+            if (![req isKindOfClass:[NBBaseNetRequest class]]) {
                 NBNetRequestLog(@"Error, request item must be YTKRequest instance.");
                 return nil;
             }
@@ -55,7 +55,7 @@
     }
     [[NBBatchNetRequestAgent sharedInstance] addBatchRequest:self];
     [self toggleAccessoriesWillStartCallBack];
-    for (NBNetRequest * req in _requestArray) {
+    for (NBBaseNetRequest * req in _requestArray) {
         req.delegate = self;
         [req start];
     }
@@ -89,7 +89,7 @@
 
 - (BOOL)isDataFromCache {
     BOOL result = YES;
-    for (NBNetRequest *request in _requestArray) {
+    for (NBBaseNetRequest *request in _requestArray) {
         if (!request.isDataFromCache) {
             result = NO;
         }
@@ -104,7 +104,7 @@
 
 #pragma mark - Network Request Delegate
 
-- (void)requestFinished:(NBNetRequest *)request {
+- (void)requestFinished:(NBBaseNetRequest *)request {
     _finishedCount++;
     if (_finishedCount == _requestArray.count) {
         [self toggleAccessoriesWillStopCallBack];
@@ -119,10 +119,10 @@
     }
 }
 
-- (void)requestFailed:(NBNetRequest *)request {
+- (void)requestFailed:(NBBaseNetRequest *)request {
     [self toggleAccessoriesWillStopCallBack];
     // Stop
-    for (NBNetRequest *req in _requestArray) {
+    for (NBBaseNetRequest *req in _requestArray) {
         [req stop];
     }
     // Callback
@@ -140,7 +140,7 @@
 }
 
 - (void)clearRequest {
-    for (NBNetRequest * req in _requestArray) {
+    for (NBBaseNetRequest * req in _requestArray) {
         [req stop];
     }
     [self clearCompletionBlock];

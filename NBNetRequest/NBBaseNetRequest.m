@@ -26,10 +26,22 @@
 #import "NBNetworkPrivate.h"
 #import "NBNetworkConfig.h"
 
-@implementation NBBaseNetRequest
+@interface NBBaseNetRequest()
+
+@property (strong, nonatomic) id cacheJson;
+@property (nonatomic, strong) id responseJSONObject;
+
+@end
+
+
+@implementation NBBaseNetRequest{
+    BOOL _dataFromCache;
+}
+
 
 /// for subclasses to overwrite
 - (void)requestCompleteFilter {
+    [self saveJsonResponseToCacheFile:[self responseJSONObject]];
 }
 
 - (void)requestFailedFilter {
@@ -57,7 +69,7 @@
 }
 
 /// append self to request queue
-- (void)start {
+- (void)startRequest {
     if (self.requestModel.useAccount && ![[NBNetworkConfig sharedInstance] isLogin]) {
         [self toggleAccessoriesWillStopCallBack];
         [self requestFailedFilter];
@@ -181,5 +193,101 @@
     }
     [self.requestAccessories addObject:accessory];
 }
+
+#pragma mark - cache
+- (void)start {
+    if (!self.requestModel.useCache) {
+        [self startRequest];
+        return;
+    }
+    
+    // check cache time
+    if ([self.requestModel cacheTimeInSeconds] < 0) {
+        [self startRequest];
+        return;
+    }
+    
+    // check cache version
+    long long cacheVersionFileContent = [self.requestModel cacheVersionFileContent];
+    if (cacheVersionFileContent != [self.requestModel cacheVersion]) {
+        [self startRequest];
+        return;
+    }
+    
+    // check cache existance
+    NSString *path = [self.requestModel cacheFilePath];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:path isDirectory:nil]) {
+        [self startRequest];
+        return;
+    }
+    
+    // check cache time
+    int seconds = [self.requestModel cacheFileDuration:path];
+    if (seconds < 0 || seconds > [self.requestModel cacheTimeInSeconds]) {
+        [self startRequest];
+        return;
+    }
+    
+    // load cache
+    _cacheJson = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    if (_cacheJson == nil) {
+        [self startRequest];
+        return;
+    }
+    
+    _dataFromCache = YES;
+    [self requestCompleteFilter];
+    NBBaseNetRequest *strongSelf = self;
+    [strongSelf.delegate requestFinished:strongSelf];
+    if (strongSelf.successCompletionBlock) {
+        strongSelf.successCompletionBlock(strongSelf);
+    }
+    [strongSelf clearCompletionBlock];
+}
+
+- (void)startWithoutCache {
+    [self startRequest];
+}
+
+- (id)cacheJson {
+    if (_cacheJson) {
+        return _cacheJson;
+    } else {
+        NSString *path = [self.requestModel cacheFilePath];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if ([fileManager fileExistsAtPath:path isDirectory:nil] == YES) {
+            _cacheJson = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        }
+        return _cacheJson;
+    }
+}
+
+- (BOOL)isDataFromCache {
+    return _dataFromCache;
+}
+
+- (id)responseJSONObject {
+    if (_cacheJson) {
+        return _cacheJson;
+    } else {
+        return _responseJSONObject;
+    }
+}
+
+#pragma mark - Network Request Delegate
+
+// 手动将其他请求的JsonResponse写入该请求的缓存
+// 比如AddNoteApi, UpdateNoteApi都会获得Note，且其与GetNoteApi共享缓存，可以通过这个接口写入GetNoteApi缓存
+- (void)saveJsonResponseToCacheFile:(id)jsonResponse {
+    if (self.requestModel.useCache && [self.requestModel cacheTimeInSeconds] > 0 && ![self isDataFromCache]) {
+        NSDictionary *json = jsonResponse;
+        if (json != nil) {
+            [NSKeyedArchiver archiveRootObject:json toFile:[self.requestModel cacheFilePath]];
+            [NSKeyedArchiver archiveRootObject:@([self.requestModel cacheVersion]) toFile:[self.requestModel cacheVersionFilePath]];
+        }
+    }
+}
+
 
 @end

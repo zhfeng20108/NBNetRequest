@@ -24,7 +24,7 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 #import "AFDownloadRequestOperation.h"
-#import "NBNetRequestModel.h"
+#import "NBBaseNetRequestModel.h"
 
 
 
@@ -54,7 +54,7 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 
 @interface NBBaseNetRequest : NSObject
 
-@property (nonatomic,strong) NBNetRequestModel *requestModel;
+@property (nonatomic,strong) NBBaseNetRequestModel *requestModel;
 
 /// Tag
 @property (nonatomic) NSInteger tag;
@@ -102,7 +102,7 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 - (void)startWithCompletionBlockWithSuccess:(void (^)(NBBaseNetRequest *request))success
                                     failure:(void (^)(NBBaseNetRequest *request))failure;
 
-+ (id)startWithRequestModel:(NBNetRequestModel *)requestModel
++ (id)startWithRequestModel:(NBBaseNetRequestModel *)requestModel
  completionBlockWithSuccess:(void (^)(NBBaseNetRequest *request))success
                     failure:(void (^)(NBBaseNetRequest *request))failure;
 

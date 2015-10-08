@@ -23,7 +23,7 @@
 		25E83ECC1BB56291009BB57B /* NBBatchNetRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EBB1BB56291009BB57B /* NBBatchNetRequestAgent.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ECD1BB56291009BB57B /* NBChainNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EBD1BB56291009BB57B /* NBChainNetRequest.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ECE1BB56291009BB57B /* NBChainNetRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EBF1BB56291009BB57B /* NBChainNetRequestAgent.m */; settings = {ASSET_TAGS = (); }; };
-		25E83ED01BB56291009BB57B /* NBNetRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC31BB56291009BB57B /* NBNetRequestModel.m */; settings = {ASSET_TAGS = (); }; };
+		25E83ED01BB56291009BB57B /* NBBaseNetRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC31BB56291009BB57B /* NBBaseNetRequestModel.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ED11BB56291009BB57B /* NBNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC51BB56291009BB57B /* NBNetworkAgent.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ED21BB56291009BB57B /* NBNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC71BB56291009BB57B /* NBNetworkConfig.m */; settings = {ASSET_TAGS = (); }; };
 		25E83ED31BB56291009BB57B /* NBNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC91BB56291009BB57B /* NBNetworkPrivate.m */; settings = {ASSET_TAGS = (); }; };
@@ -80,8 +80,8 @@
 		25E83EBD1BB56291009BB57B /* NBChainNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBChainNetRequest.m; sourceTree = "<group>"; };
 		25E83EBE1BB56291009BB57B /* NBChainNetRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBChainNetRequestAgent.h; sourceTree = "<group>"; };
 		25E83EBF1BB56291009BB57B /* NBChainNetRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBChainNetRequestAgent.m; sourceTree = "<group>"; };
-		25E83EC21BB56291009BB57B /* NBNetRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetRequestModel.h; sourceTree = "<group>"; };
-		25E83EC31BB56291009BB57B /* NBNetRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetRequestModel.m; sourceTree = "<group>"; };
+		25E83EC21BB56291009BB57B /* NBBaseNetRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBBaseNetRequestModel.h; sourceTree = "<group>"; };
+		25E83EC31BB56291009BB57B /* NBBaseNetRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBBaseNetRequestModel.m; sourceTree = "<group>"; };
 		25E83EC41BB56291009BB57B /* NBNetworkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetworkAgent.h; sourceTree = "<group>"; };
 		25E83EC51BB56291009BB57B /* NBNetworkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetworkAgent.m; sourceTree = "<group>"; };
 		25E83EC61BB56291009BB57B /* NBNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetworkConfig.h; sourceTree = "<group>"; };
@@ -211,8 +211,8 @@
 				25E83EBD1BB56291009BB57B /* NBChainNetRequest.m */,
 				25E83EBE1BB56291009BB57B /* NBChainNetRequestAgent.h */,
 				25E83EBF1BB56291009BB57B /* NBChainNetRequestAgent.m */,
-				25E83EC21BB56291009BB57B /* NBNetRequestModel.h */,
-				25E83EC31BB56291009BB57B /* NBNetRequestModel.m */,
+				25E83EC21BB56291009BB57B /* NBBaseNetRequestModel.h */,
+				25E83EC31BB56291009BB57B /* NBBaseNetRequestModel.m */,
 				25E83EC41BB56291009BB57B /* NBNetworkAgent.h */,
 				25E83EC51BB56291009BB57B /* NBNetworkAgent.m */,
 				25E83EC61BB56291009BB57B /* NBNetworkConfig.h */,
@@ -412,7 +412,7 @@
 				25E83ED31BB56291009BB57B /* NBNetworkPrivate.m in Sources */,
 				25E83ECC1BB56291009BB57B /* NBBatchNetRequestAgent.m in Sources */,
 				25E83E841BB5614B009BB57B /* main.m in Sources */,
-				25E83ED01BB56291009BB57B /* NBNetRequestModel.m in Sources */,
+				25E83ED01BB56291009BB57B /* NBBaseNetRequestModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

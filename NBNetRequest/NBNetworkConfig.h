@@ -23,13 +23,13 @@
 
 #import <Foundation/Foundation.h>
 #import "NBBaseNetRequest.h"
-#import "NBNetRequestModel.h"
+#import "NBBaseNetRequestModel.h"
 @protocol NBUrlFilterProtocol <NSObject>
 - (NSString *)filterUrl:(NSString *)originUrl withRequest:(NBBaseNetRequest *)request;
 @end
 
 @protocol NBCacheDirPathFilterProtocol <NSObject>
-- (NSString *)filterCacheDirPath:(NSString *)originPath withRequestModel:(NBNetRequestModel *)requestModel;
+- (NSString *)filterCacheDirPath:(NSString *)originPath withRequestModel:(NBBaseNetRequestModel *)requestModel;
 @end
 
 @interface NBNetworkConfig : NSObject

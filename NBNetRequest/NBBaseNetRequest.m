@@ -108,7 +108,7 @@
     [self start];
 }
 
-+ (id)startWithRequestModel:(NBNetRequestModel *)requestModel
++ (id)startWithRequestModel:(NBBaseNetRequestModel *)requestModel
  completionBlockWithSuccess:(void (^)(NBBaseNetRequest *request))success
                     failure:(void (^)(NBBaseNetRequest *request))failure
 {

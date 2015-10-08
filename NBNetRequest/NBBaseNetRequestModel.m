@@ -6,10 +6,10 @@
 //  Copyright © 2015年 AsiaInnovations. All rights reserved.
 //
 
-#import "NBNetRequestModel.h"
+#import "NBBaseNetRequestModel.h"
 #import "NBNetworkPrivate.h"
 #import "NBNetworkConfig.h"
-@implementation NBNetRequestModel
+@implementation NBBaseNetRequestModel
 
 - (instancetype)init
 {
@@ -34,7 +34,7 @@
 
 + (id)modelWithBaseUrl:(NSString *)baseUrl path:(NSString *)path params:(id)params
 {
-    NBNetRequestModel *model = [[[self class] alloc] init];
+    NBBaseNetRequestModel *model = [[[self class] alloc] init];
     model.baseUrl = baseUrl;
     model.path = path;
     model.requestArgument = params;

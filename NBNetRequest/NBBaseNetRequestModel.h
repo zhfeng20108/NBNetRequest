@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger , NBNetRequestSerializerType) {
 };
 typedef void (^AFConstructingBlock)(id<AFMultipartFormData> formData);
 
-@interface NBNetRequestModel : NSObject
+@interface NBBaseNetRequestModel : NSObject
 
 /// 请求的BaseURL
 @property (nonatomic,strong) NSString *baseUrl;

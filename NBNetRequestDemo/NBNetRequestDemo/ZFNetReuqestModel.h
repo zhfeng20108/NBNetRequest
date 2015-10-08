@@ -6,8 +6,8 @@
 //  Copyright © 2015年 feng. All rights reserved.
 //
 
-#import "NBNetRequestModel.h"
+#import "NBBaseNetRequestModel.h"
 
-@interface ZFNetReuqestModel : NBNetRequestModel
+@interface ZFNetReuqestModel : NBBaseNetRequestModel
 
 @end

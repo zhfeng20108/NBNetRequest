@@ -244,36 +244,9 @@
     return result;
 }
 - (void)handleRequestResult:(NSURLSessionTask *)task request:(NBBaseNetRequest *)request error:(NSError *)error {
-    NSInteger errorCode = error.code;
-    NSUInteger ipIndex = [[request.userInfo objectForKey:@"ipIndex"] unsignedIntegerValue];
-    NSString *url = [self buildRequestUrl:request];
-    NSString * baseIPString = [NSURL URLWithString:url].host;
-    NSString *baseUrl;
-    if ([request.requestModel useCDN]) {
-        if ([request.requestModel cdnUrl].length > 0) {
-            baseUrl = [request.requestModel cdnUrl];
-        } else {
-            baseUrl = [_config cdnUrl];
-        }
-    } else {
-        if ([request.requestModel baseUrl].length > 0) {
-            baseUrl = [request.requestModel baseUrl];
-        } else {
-            baseUrl = [_config baseUrl];
-        }
-    }
-    baseUrl = [NSURL URLWithString:baseUrl].host;
-    BOOL shouldTryNextIP = (errorCode == NSURLErrorCannotFindHost || errorCode == NSURLErrorCannotConnectToHost || errorCode == NSURLErrorTimedOut);
-    if(![baseIPString isEqualToString:baseUrl] && shouldTryNextIP) {
-        [self removeSessionTask:task];
-        request.userInfo = @{@"ipIndex":@(ipIndex+1)};
-        [self addRequest:request];
-    } else {
-        [self handleRequestResult:task request:request responseObject:nil];
-    }
+    [self handleRequestResult:task request:request responseObject:nil];
 }
 - (void)handleRequestResult:(NSURLSessionTask *)task request:(NBBaseNetRequest *)request responseObject:(id)responseObject {
-    request.userInfo = @{@"ipIndex":@(0)};
     [request setResponseObject:responseObject];
     [self handleRequestResult:task];
 }

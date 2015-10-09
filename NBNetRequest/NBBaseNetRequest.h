@@ -146,6 +146,9 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 /// 是否当前的数据从缓存获得
 - (BOOL)isDataFromCache;
 
+/// 清除缓存
+- (void)emptyCache;
+
 /// 强制更新缓存
 - (void)startWithoutCache;
 

@@ -46,6 +46,8 @@ typedef void (^AFConstructingBlock)(id<AFMultipartFormData> formData);
 
 @property (nonatomic,assign) BOOL useCache;
 @property (nonatomic,assign) NSInteger cacheTimeInSeconds;
+/// 是否要强制刷新缓存
+@property (nonatomic,assign) BOOL refreshCache;
 
 @property (nonatomic, assign) NBNetRequestMethod requestMethod;
 @property (nonatomic, assign) NSTimeInterval requestTimeoutInterval;

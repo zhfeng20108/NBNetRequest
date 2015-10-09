@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.requestSerializerType = NBNetRequestSerializerTypeURL;//默认
+        self.useCache = YES;
         self.cacheTimeInSeconds = 4*60*60;//4小时缓存
     }
     return self;

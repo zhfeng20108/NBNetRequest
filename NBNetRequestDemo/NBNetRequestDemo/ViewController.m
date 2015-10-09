@@ -23,6 +23,7 @@
     ZFNetReuqestModel *requestModel = [ZFNetReuqestModel modelWithPath:@"/data/sk/101010100.html"];
     requestModel.requestMethod = NBNetRequestMethodGet;
     requestModel.useAccount = NO;
+    requestModel.refreshCache = YES;
     [ZFNetRequest startWithRequestModel:requestModel completionBlockWithSuccess:^(NBBaseNetRequest *request) {
         NSLog(@"%@",[request responseJSONObject]);
         NSLog(@"%@",[request responseResultCode]);

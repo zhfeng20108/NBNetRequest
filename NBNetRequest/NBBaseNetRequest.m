@@ -196,6 +196,10 @@
 
 #pragma mark - cache
 - (void)start {
+    if (self.requestModel.refreshCache) {
+        [self startRequest];
+        return;
+    }
     if (!self.requestModel.useCache) {
         [self startRequest];
         return;
@@ -245,6 +249,25 @@
     }
     [strongSelf clearCompletionBlock];
 }
+
+/// 清除缓存
+- (void)emptyCache
+{
+    if (_cacheJson) {
+        _cacheJson = nil;
+    }
+    NSString *path = [self.requestModel cacheFilePath];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:path isDirectory:nil] == YES) {
+        [fileManager removeItemAtPath:path error:NULL];
+    }
+    
+    NSString *versionPath = [self.requestModel cacheVersionFilePath];
+    if ([fileManager fileExistsAtPath:versionPath isDirectory:nil]) {
+        [fileManager removeItemAtPath:versionPath error:NULL];
+    }
+}
+
 
 - (void)startWithoutCache {
     [self startRequest];

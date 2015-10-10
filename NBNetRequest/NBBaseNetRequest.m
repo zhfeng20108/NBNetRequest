@@ -172,7 +172,7 @@
 {
     id responseObj = [self responseJSONObject];
     if([responseObj isKindOfClass:[NSDictionary class]]) {
-        NSString *key = self.responseCodeKey;
+        NSString *key = self.responseDataKey;
         if (!key) {
             key = [NBNetworkConfig sharedInstance].responseDataKey;
         }

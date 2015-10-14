@@ -77,7 +77,7 @@
             baseUrl = [_config baseUrl];
         }
     }
-    NSString * encodedStringUrl = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)detailUrl,NULL,NULL,kCFStringEncodingUTF8));
+    NSString * encodedStringUrl = [detailUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     return [NSString stringWithFormat:@"%@%@", baseUrl, encodedStringUrl?:@""];
 }
 

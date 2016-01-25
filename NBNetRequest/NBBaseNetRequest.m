@@ -135,7 +135,11 @@
     if (_responseJSONObject == responseObject) {
         return;
     }
-    _responseJSONObject = responseObject;
+    if ([responseObject isKindOfClass:[NSData class]]) {
+        _responseJSONObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:NULL];
+    } else {
+        _responseJSONObject = responseObject;
+    }
 }
 
 - (NSString *)responseString {

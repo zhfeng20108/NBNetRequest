@@ -23,7 +23,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NBBaseNetRequest.h"
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface NBNetworkAgent : NSObject
 

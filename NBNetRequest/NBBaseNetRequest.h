@@ -23,7 +23,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
-#import <AFDownloadRequestOperation/AFDownloadRequestOperation.h>
+#import "AFDownloadRequestOperation.h"
 #import "NBBaseNetRequestModel.h"
 
 

@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFDownloadRequestOperation.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>AFNetworkActivityLogger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>39705FC4E277EDD507963B2A12B2059F</key>
+		<key>5EA94E3357CB6918D14CF6C129484928</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>518DFF824B3E423D9CAEFA3F2E9CEF32</key>
+		<key>C18BE364AFB13DDFDFC7ADF294CC694F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70D89C8F58BA91DBE0B4B7E6D788DFD8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A4B29ABA4DA76C6F7BE0004D9BFA83DF</key>
+		<key>EC0D1D30F031352A2DB09856D4D19BD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

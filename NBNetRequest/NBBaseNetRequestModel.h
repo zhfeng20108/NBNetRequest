@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
-#import <AFDownloadRequestOperation/AFDownloadRequestOperation.h>
+#import "AFDownloadRequestOperation.h"
 typedef NS_ENUM(NSInteger , NBNetRequestMethod) {
     NBNetRequestMethodGet = 0,
     NBNetRequestMethodPost,

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NBNetRequest"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "a net request based on AFNetworking."
 
   s.description  = <<-DESC
@@ -75,7 +75,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/zhfeng20108/NBNetRequest.git", :tag => "0.0.6" }
+  s.source       = { :git => "https://github.com/zhfeng20108/NBNetRequest.git", :tag => "0.0.7" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -129,6 +129,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "AFNetworking"
   s.dependency "AFNetworkActivityLogger"
-  s.dependency "AFDownloadRequestOperation"
+  s.dependency "AFDownloadRequestOperation",:git=>'https://github.com/zhfeng20108/AFDownloadRequestOperation'
 
 end

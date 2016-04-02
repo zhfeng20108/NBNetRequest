@@ -24,7 +24,7 @@
 #import "NBNetworkAgent.h"
 #import "NBNetworkConfig.h"
 #import "NBNetworkPrivate.h"
-#import "AFDownloadRequestOperation.h"
+#import <AFDownloadRequestOperation/AFDownloadRequestOperation.h>
 
 @implementation NBNetworkAgent {
     AFHTTPSessionManager *_manager;

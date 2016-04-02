@@ -22,8 +22,8 @@
 //  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
-#import "AFDownloadRequestOperation.h"
+#import <AFNetworking/AFNetworking.h>
+#import <AFDownloadRequestOperation/AFDownloadRequestOperation.h>
 #import "NBBaseNetRequestModel.h"
 
 

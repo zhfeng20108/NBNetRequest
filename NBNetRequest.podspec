@@ -128,7 +128,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.subspec 'AFDownloadRequestOperation' do  |download|
-    download.source_files =  "AFDownloadRequestOperation/**/*.{h,m}"
+    download.source_files =  "NBNetRequest/AFDownloadRequestOperation/**/*.{h,m}"
   end
   s.dependency "AFNetworking"
   s.dependency "AFNetworkActivityLogger"

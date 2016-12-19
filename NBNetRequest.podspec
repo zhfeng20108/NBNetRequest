@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NBNetRequest"
-  s.version      = "0.0.11"
+  s.version      = "0.2.0"
   s.summary      = "a net request based on AFNetworking."
 
   s.description  = <<-DESC
@@ -64,10 +64,10 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "7.0"
+  # s.ios.deployment_target = "8.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -75,7 +75,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/zhfeng20108/NBNetRequest.git", :tag => "0.0.11" }
+  s.source       = { :git => "https://github.com/zhfeng20108/NBNetRequest.git", :tag => "0.2.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -127,10 +127,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.subspec 'AFDownloadRequestOperation' do  |download|
-    download.source_files =  "NBNetRequest/AFDownloadRequestOperation/**/*.{h,m}"
-  end
+
   s.dependency "AFNetworking"
-  s.dependency "AFNetworkActivityLogger"
 
 end

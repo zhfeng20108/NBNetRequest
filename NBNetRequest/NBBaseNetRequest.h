@@ -23,12 +23,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
-#import "AFDownloadRequestOperation.h"
 #import "NBBaseNetRequestModel.h"
-
-
-
-typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, NSInteger bytesRead, long long totalBytesRead, long long totalBytesExpected, long long totalBytesReadForFile, long long totalBytesExpectedToReadForFile);
 
 @class NBBaseNetRequest;
 
@@ -131,9 +126,6 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 
 /// 用于检查Status Code是否正常的方法
 - (BOOL)statusCodeValidator;
-
-/// 当需要断点续传时，获得下载进度的回调
-- (AFDownloadProgressBlock)resumableDownloadProgressBlock;
 
 - (void)setResponseObject:(id)responseObject;
 - (id)responseJSONObject;

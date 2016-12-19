@@ -1,5 +1,5 @@
 
+target 'NBNetRequestDemo' do
 pod 'AFNetworking'
-pod 'AFNetworkActivityLogger'
-
+end
 

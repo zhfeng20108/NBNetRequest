@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		259350FD1BC638F5004C18D7 /* ZFNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 259350FC1BC638F5004C18D7 /* ZFNetRequest.m */; };
-		25CA3CE61CAFD63F0037C09D /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CA3CE31CAFD63F0037C09D /* AFDownloadRequestOperation.m */; };
 		25E1F2E51BB91B6D00EAB928 /* ZFNetReuqestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E1F2E41BB91B6D00EAB928 /* ZFNetReuqestModel.m */; };
 		25E1F2E81BB91E0800EAB928 /* ZFCurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E1F2E71BB91E0800EAB928 /* ZFCurrentUser.m */; };
 		25E83E841BB5614B009BB57B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83E831BB5614B009BB57B /* main.m */; };
@@ -28,7 +27,7 @@
 		25E83ED11BB56291009BB57B /* NBNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC51BB56291009BB57B /* NBNetworkAgent.m */; };
 		25E83ED21BB56291009BB57B /* NBNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC71BB56291009BB57B /* NBNetworkConfig.m */; };
 		25E83ED31BB56291009BB57B /* NBNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC91BB56291009BB57B /* NBNetworkPrivate.m */; };
-		3DF0DAF5737222E545503066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC31B55CD08C532E95CFE9D /* libPods.a */; };
+		EDB5FF812A8CE33AA0DC4E32 /* libPods-NBNetRequestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15569C22585D9365024F7219 /* libPods-NBNetRequestDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15382AF4A4BC97D86C04B7C8 /* Pods-NBNetRequestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBNetRequestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBNetRequestDemo/Pods-NBNetRequestDemo.release.xcconfig"; sourceTree = "<group>"; };
+		15569C22585D9365024F7219 /* libPods-NBNetRequestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NBNetRequestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		259350FB1BC638F5004C18D7 /* ZFNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFNetRequest.h; sourceTree = "<group>"; };
 		259350FC1BC638F5004C18D7 /* ZFNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFNetRequest.m; sourceTree = "<group>"; };
-		25CA3CE21CAFD63F0037C09D /* AFDownloadRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDownloadRequestOperation.h; sourceTree = "<group>"; };
-		25CA3CE31CAFD63F0037C09D /* AFDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDownloadRequestOperation.m; sourceTree = "<group>"; };
 		25E1F2E31BB91B6D00EAB928 /* ZFNetReuqestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFNetReuqestModel.h; sourceTree = "<group>"; };
 		25E1F2E41BB91B6D00EAB928 /* ZFNetReuqestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFNetReuqestModel.m; sourceTree = "<group>"; };
 		25E1F2E61BB91E0800EAB928 /* ZFCurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCurrentUser.h; sourceTree = "<group>"; };
@@ -91,9 +90,7 @@
 		25E83EC71BB56291009BB57B /* NBNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetworkConfig.m; sourceTree = "<group>"; };
 		25E83EC81BB56291009BB57B /* NBNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetworkPrivate.h; sourceTree = "<group>"; };
 		25E83EC91BB56291009BB57B /* NBNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetworkPrivate.m; sourceTree = "<group>"; };
-		3CC31B55CD08C532E95CFE9D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FAC4E148D9BF190EF4E861D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		995D649E942BD25FB5476C22 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2A68F42685FC6B678E9E4315 /* Pods-NBNetRequestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBNetRequestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBNetRequestDemo/Pods-NBNetRequestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF0DAF5737222E545503066 /* libPods.a in Frameworks */,
+				EDB5FF812A8CE33AA0DC4E32 /* libPods-NBNetRequestDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,23 +119,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11B13F5F886FC2B3569B59B6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3CC31B55CD08C532E95CFE9D /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		25CA3CE11CAFD63F0037C09D /* AFDownloadRequestOperation */ = {
-			isa = PBXGroup;
-			children = (
-				25CA3CE21CAFD63F0037C09D /* AFDownloadRequestOperation.h */,
-				25CA3CE31CAFD63F0037C09D /* AFDownloadRequestOperation.m */,
-			);
-			path = AFDownloadRequestOperation;
-			sourceTree = "<group>";
-		};
 		25E83E761BB5614B009BB57B = {
 			isa = PBXGroup;
 			children = (
@@ -147,8 +127,8 @@
 				25E83E9B1BB5614B009BB57B /* NBNetRequestDemoTests */,
 				25E83EA61BB5614B009BB57B /* NBNetRequestDemoUITests */,
 				25E83E801BB5614B009BB57B /* Products */,
-				EA03751472557A38D24ACC3F /* Pods */,
-				11B13F5F886FC2B3569B59B6 /* Frameworks */,
+				7FB2CB4B02813E1A9DDAC615 /* Pods */,
+				E1CA5E1EDBA055E823DDA7CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,19 +211,26 @@
 				25E83EC71BB56291009BB57B /* NBNetworkConfig.m */,
 				25E83EC81BB56291009BB57B /* NBNetworkPrivate.h */,
 				25E83EC91BB56291009BB57B /* NBNetworkPrivate.m */,
-				25CA3CE11CAFD63F0037C09D /* AFDownloadRequestOperation */,
 			);
 			name = NBNetRequest;
 			path = ../NBNetRequest;
 			sourceTree = "<group>";
 		};
-		EA03751472557A38D24ACC3F /* Pods */ = {
+		7FB2CB4B02813E1A9DDAC615 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				995D649E942BD25FB5476C22 /* Pods.debug.xcconfig */,
-				5FAC4E148D9BF190EF4E861D /* Pods.release.xcconfig */,
+				2A68F42685FC6B678E9E4315 /* Pods-NBNetRequestDemo.debug.xcconfig */,
+				15382AF4A4BC97D86C04B7C8 /* Pods-NBNetRequestDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1CA5E1EDBA055E823DDA7CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15569C22585D9365024F7219 /* libPods-NBNetRequestDemo.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,12 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25E83EAC1BB5614B009BB57B /* Build configuration list for PBXNativeTarget "NBNetRequestDemo" */;
 			buildPhases = (
-				67E57D0C8A825D3F72EC53F1 /* Check Pods Manifest.lock */,
+				A20BDEC5D6010A5246857585 /* [CP] Check Pods Manifest.lock */,
 				25E83E7B1BB5614B009BB57B /* Sources */,
 				25E83E7C1BB5614B009BB57B /* Frameworks */,
 				25E83E7D1BB5614B009BB57B /* Resources */,
-				D6C2CACA0AF6A4626490AE66 /* Copy Pods Resources */,
-				209E7F4DB85255A42C49F9AC /* Embed Pods Frameworks */,
+				E53F9E3E1F7F916A4EAA986C /* [CP] Embed Pods Frameworks */,
+				B473DD3D72AF58EC05FD58A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -375,49 +362,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		209E7F4DB85255A42C49F9AC /* Embed Pods Frameworks */ = {
+		A20BDEC5D6010A5246857585 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		67E57D0C8A825D3F72EC53F1 /* Check Pods Manifest.lock */ = {
+		B473DD3D72AF58EC05FD58A9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NBNetRequestDemo/Pods-NBNetRequestDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D6C2CACA0AF6A4626490AE66 /* Copy Pods Resources */ = {
+		E53F9E3E1F7F916A4EAA986C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NBNetRequestDemo/Pods-NBNetRequestDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -427,7 +414,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25CA3CE61CAFD63F0037C09D /* AFDownloadRequestOperation.m in Sources */,
 				25E83ECA1BB56291009BB57B /* NBBaseNetRequest.m in Sources */,
 				25E1F2E51BB91B6D00EAB928 /* ZFNetReuqestModel.m in Sources */,
 				25E83ED11BB56291009BB57B /* NBNetworkAgent.m in Sources */,
@@ -581,7 +567,7 @@
 		};
 		25E83EAD1BB5614B009BB57B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 995D649E942BD25FB5476C22 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 2A68F42685FC6B678E9E4315 /* Pods-NBNetRequestDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NBNetRequestDemo/Info.plist;
@@ -593,7 +579,7 @@
 		};
 		25E83EAE1BB5614B009BB57B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FAC4E148D9BF190EF4E861D /* Pods.release.xcconfig */;
+			baseConfigurationReference = 15382AF4A4BC97D86C04B7C8 /* Pods-NBNetRequestDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NBNetRequestDemo/Info.plist;

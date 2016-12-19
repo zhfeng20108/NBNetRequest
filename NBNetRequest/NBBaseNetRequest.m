@@ -64,10 +64,6 @@
     }
 }
 
-- (AFDownloadProgressBlock)resumableDownloadProgressBlock {
-    return nil;
-}
-
 /// append self to request queue
 - (void)startRequest {
     if (self.requestModel.useAccount && ![[NBNetworkConfig sharedInstance] isLogin]) {

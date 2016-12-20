@@ -161,7 +161,7 @@
                 request.sessionTask = downloadTask;
                 [downloadTask resume];
             } else {
-                request.sessionTask = [_manager GET:url parameters:param success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
+                request.sessionTask = [_manager GET:url parameters:param progress:nil success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
                     [self handleRequestResult:task request:request responseObject:responseObject];
                 } failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
                     [self handleRequestResult:task request:request error:error];
@@ -169,14 +169,14 @@
             }
         } else if (method == NBNetRequestMethodPost) {
             if (constructingBlock != nil) {
-                request.sessionTask = [_manager POST:url parameters:param constructingBodyWithBlock:constructingBlock
+                request.sessionTask = [_manager POST:url parameters:param constructingBodyWithBlock:constructingBlock progress:nil
                                                   success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
                                                       [self handleRequestResult:task request:request responseObject:responseObject];
                 } failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
                     [self handleRequestResult:task request:request error:error];
                 }];
             } else {
-                request.sessionTask = [_manager POST:url parameters:param success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
+                request.sessionTask = [_manager POST:url parameters:param progress:nil success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
                     [self handleRequestResult:task request:request responseObject:responseObject];
                 }                                 failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
                     [self handleRequestResult:task request:request error:error];

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NBNetworkConfig.h"
+#import "NBNetworkActivityLogger.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[NBNetworkActivityLogger sharedLogger] startLogging];
+    [[NBNetworkActivityLogger sharedLogger] setLevel:NBHTTPRequestLoggerLevelDebug];
+    
     [[NBNetworkConfig sharedInstance] setBaseUrl:@"http://www.weather.com.cn"];
     [[NBNetworkConfig sharedInstance] setResponseCodeKey:nil];
     [[NBNetworkConfig sharedInstance] setResponseDataKey:@"weatherinfo"];

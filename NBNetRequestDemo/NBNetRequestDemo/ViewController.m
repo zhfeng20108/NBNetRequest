@@ -25,14 +25,8 @@
     requestModel.useAccount = NO;
     requestModel.refreshCache = YES;
     [ZFNetRequest startWithRequestModel:requestModel completionBlockWithSuccess:^(NBBaseNetRequest *request) {
-        NSLog(@"%@",[request responseJSONObject]);
-        NSLog(@"%@",[request responseResultCode]);
-
-        NSLog(@"%@",[request responseResultDictionary]);
-
-        NSLog(@"%@",@([NBNetworkConfig sharedInstance].isLogin));
+        
     } failure:^(NBBaseNetRequest *request) {
-        NSLog(@"%@",request);
     }];
 }
 

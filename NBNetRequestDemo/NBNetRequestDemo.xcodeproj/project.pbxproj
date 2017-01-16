@@ -27,6 +27,7 @@
 		25E83ED11BB56291009BB57B /* NBNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC51BB56291009BB57B /* NBNetworkAgent.m */; };
 		25E83ED21BB56291009BB57B /* NBNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC71BB56291009BB57B /* NBNetworkConfig.m */; };
 		25E83ED31BB56291009BB57B /* NBNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E83EC91BB56291009BB57B /* NBNetworkPrivate.m */; };
+		99A591DC1E2CB7F7000E751D /* NBNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A591DB1E2CB7F7000E751D /* NBNetworkActivityLogger.m */; };
 		EDB5FF812A8CE33AA0DC4E32 /* libPods-NBNetRequestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15569C22585D9365024F7219 /* libPods-NBNetRequestDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		25E83EC81BB56291009BB57B /* NBNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetworkPrivate.h; sourceTree = "<group>"; };
 		25E83EC91BB56291009BB57B /* NBNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetworkPrivate.m; sourceTree = "<group>"; };
 		2A68F42685FC6B678E9E4315 /* Pods-NBNetRequestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBNetRequestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBNetRequestDemo/Pods-NBNetRequestDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		99A591DA1E2CB7F7000E751D /* NBNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBNetworkActivityLogger.h; sourceTree = "<group>"; };
+		99A591DB1E2CB7F7000E751D /* NBNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBNetworkActivityLogger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 		25E83EB51BB56291009BB57B /* NBNetRequest */ = {
 			isa = PBXGroup;
 			children = (
+				99A591DA1E2CB7F7000E751D /* NBNetworkActivityLogger.h */,
+				99A591DB1E2CB7F7000E751D /* NBNetworkActivityLogger.m */,
 				25E83EB61BB56291009BB57B /* NBBaseNetRequest.h */,
 				25E83EB71BB56291009BB57B /* NBBaseNetRequest.m */,
 				25E83EB81BB56291009BB57B /* NBBatchNetRequest.h */,
@@ -425,6 +430,7 @@
 				259350FD1BC638F5004C18D7 /* ZFNetRequest.m in Sources */,
 				25E83ECE1BB56291009BB57B /* NBChainNetRequestAgent.m in Sources */,
 				25E83ED21BB56291009BB57B /* NBNetworkConfig.m in Sources */,
+				99A591DC1E2CB7F7000E751D /* NBNetworkActivityLogger.m in Sources */,
 				25E83ED31BB56291009BB57B /* NBNetworkPrivate.m in Sources */,
 				25E83ECC1BB56291009BB57B /* NBBatchNetRequestAgent.m in Sources */,
 				25E83E841BB5614B009BB57B /* main.m in Sources */,

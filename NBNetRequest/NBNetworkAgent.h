@@ -22,8 +22,8 @@
 //  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "NBBaseNetRequest.h"
 #import <AFNetworking/AFNetworking.h>
+#import "NBBaseNetRequest.h"
 
 @interface NBNetworkAgent : NSObject
 

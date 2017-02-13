@@ -23,6 +23,7 @@
         _useCDN = NO;
         _useCache = NO;
         _cacheTimeInSeconds = 86400;//默认缓存时间24小时
+        self.priority = NSURLSessionTaskPriorityDefault;
     }
     return self;
 }

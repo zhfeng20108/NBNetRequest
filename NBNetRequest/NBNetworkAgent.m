@@ -133,8 +133,6 @@
             }
         }];
         request.sessionTask = dataTask;
-        // 使用resume方法启动任务
-        [dataTask resume];
     } else {
         if (method == NBNetRequestMethodGet) {
             if (request.requestModel.resumableDownloadPath) {
@@ -159,7 +157,6 @@
 //                    NSLog(@"%f",downloadPercentage);
 //                }];
                 request.sessionTask = downloadTask;
-                [downloadTask resume];
             } else {
                 request.sessionTask = [_manager GET:url parameters:param progress:nil success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
                     [self handleRequestResult:task request:request responseObject:responseObject];
@@ -211,7 +208,11 @@
             return;
         }
     }
+    //配置优先级
+    request.sessionTask.priority = [request.requestModel priority];
 
+    // 使用resume方法启动任务
+    [request.sessionTask resume];
     NBNetRequestLog(@"Add request: %@", NSStringFromClass([request class]));
     [self addSessionTask:request];
 }

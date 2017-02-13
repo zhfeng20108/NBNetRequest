@@ -56,6 +56,13 @@ typedef void (^AFConstructingBlock)(id<AFMultipartFormData> formData);
 /// 请求的SerializerType
 @property (nonatomic, assign) NBNetRequestSerializerType requestSerializerType;
 
+/* If no priority is specified, the task will operate with the default priority
+ * as defined by the constant NSURLSessionTaskPriorityDefault. Two additional
+ * priority levels are provided: NSURLSessionTaskPriorityLow and
+ * NSURLSessionTaskPriorityHigh, but use is not restricted to these.
+ */
+@property float priority;
+
 /// 当POST的内容带有文件等富文本时使用
 - (AFConstructingBlock)constructingBodyBlock;
 

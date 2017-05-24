@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NBNetRequest"
-  s.version      = "0.2.3"
+  s.version      = "0.2.4"
   s.summary      = "a net request based on AFNetworking."
 
   s.description  = <<-DESC
@@ -75,7 +75,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/zhfeng20108/NBNetRequest.git", :tag => "0.2.3" }
+  s.source       = { :git => "https://github.com/zhfeng20108/NBNetRequest.git", :tag => "0.2.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

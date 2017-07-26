@@ -27,7 +27,7 @@
 
 @interface NBNetworkAgent : NSObject
 
-+ (NBNetworkAgent *)sharedInstance;
++ (instancetype)sharedInstance;
 
 - (void)addRequest:(NBBaseNetRequest *)request;
 

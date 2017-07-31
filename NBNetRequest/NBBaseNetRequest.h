@@ -83,8 +83,6 @@
 
 @property (strong, nonatomic) NSString *responseDataKey;
 
-
-
 /// append self to request queue
 - (void)start;
 
@@ -129,7 +127,7 @@
 
 - (void)setResponseObject:(id)responseObject;
 - (id)responseJSONObject;
-
+- (NSString *)responseErrorMessage;
 
 
 /// 返回当前缓存的对象

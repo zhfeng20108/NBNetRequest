@@ -301,6 +301,12 @@
     }
 }
 
+- (NSString *)responseErrorMessage
+{
+    //子类去重写
+    return nil;
+}
+
 #pragma mark - Network Request Delegate
 
 // 手动将其他请求的JsonResponse写入该请求的缓存

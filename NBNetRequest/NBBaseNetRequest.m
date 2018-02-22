@@ -199,6 +199,7 @@
 
 #pragma mark - cache
 - (void)start {
+    _dataFromCache = NO;
     if (self.requestModel.refreshCache) {
         [self startRequest];
         return;
@@ -256,6 +257,7 @@
 /// 清除缓存
 - (void)emptyCache
 {
+    _dataFromCache = NO;
     if (_cacheJson) {
         _cacheJson = nil;
     }

@@ -24,8 +24,13 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 #import "NBBaseNetRequest.h"
+#import "NBNetworkConfig.h"
 
 @interface NBNetworkAgent : NSObject
+@property(nonatomic, strong) AFHTTPSessionManager *manager;
+@property(nonatomic, strong) NBNetworkConfig *config;
+@property(nonatomic, strong) NSMutableDictionary *requestsRecord;
+@property(nonatomic, assign) pthread_mutex_t lock;
 
 + (instancetype)sharedInstance;
 
@@ -35,7 +40,13 @@
 
 - (void)cancelAllRequests;
 
+- (void)handleRequestResult:(NSURLSessionTask *)task;
+
 /// 根据request和networkConfig构建url
 - (NSString *)buildRequestUrl:(NBBaseNetRequest *)request;
+
+- (void)addRequestToRecord:(NBBaseNetRequest *)request;
+
+- (void)removeRequestFromRecord:(NBBaseNetRequest *)request;
 
 @end

@@ -24,12 +24,8 @@
 #import "NBNetworkAgent.h"
 #import "NBNetworkConfig.h"
 #import "NBNetworkPrivate.h"
-
-@implementation NBNetworkAgent {
-    AFHTTPSessionManager *_manager;
-    NBNetworkConfig *_config;
-    NSMutableDictionary *_requestsRecord;
-}
+#import <pthread/pthread.h>
+@implementation NBNetworkAgent
 
 + (instancetype)sharedInstance {
     static id sharedInstance = nil;
@@ -47,6 +43,8 @@
         _manager = [AFHTTPSessionManager manager];
         _requestsRecord = [NSMutableDictionary dictionary];
         _manager.operationQueue.maxConcurrentOperationCount = 4;
+        _manager.completionQueue = dispatch_queue_create("ULNetCompletionQueue", DISPATCH_QUEUE_SERIAL);
+        pthread_mutex_init(&_lock, NULL);
     }
     return self;
 }
@@ -61,7 +59,7 @@
     for (id<NBUrlFilterProtocol> f in filters) {
         detailUrl = [f filterUrl:detailUrl withRequest:request];
     }
-
+    
     NSString *baseUrl;
     if ([request.requestModel useCDN]) {
         if ([request.requestModel cdnUrl].length > 0) {
@@ -85,7 +83,7 @@
     NSString *url = [self buildRequestUrl:request];
     id param = request.requestModel.requestArgument;
     AFConstructingBlock constructingBlock = [request.requestModel constructingBodyBlock];
-
+    
     if (request.requestModel.requestSerializerType == NBNetRequestSerializerTypeHTTP) {
         _manager.requestSerializer = [AFHTTPRequestSerializer serializer];
         _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -101,7 +99,7 @@
     }
     
     _manager.requestSerializer.timeoutInterval = [request.requestModel requestTimeoutInterval];
-
+    
     // if api need server username and password
     NSArray *authorizationHeaderFieldArray = [request requestAuthorizationHeaderFieldArray];
     if (authorizationHeaderFieldArray != nil) {
@@ -121,15 +119,15 @@
             }
         }
     }
-
+    __weak typeof(self) wself = self;
     // if api build custom url request
     NSURLRequest *customUrlRequest= [request.requestModel buildCustomUrlRequest];
     if (customUrlRequest) {
         __block NSURLSessionDataTask *dataTask = [_manager dataTaskWithRequest:customUrlRequest completionHandler:^(NSURLResponse * __nonnull response, id __nonnull responseObject, NSError * __nonnull error) {
             if (error) {
-                [self handleRequestResult:dataTask request:request error:error];
+                [wself handleRequestResult:dataTask request:request error:error];
             } else {
-                [self handleRequestResult:dataTask request:request responseObject:responseObject];
+                [wself handleRequestResult:dataTask request:request responseObject:responseObject];
             }
         }];
         request.sessionTask = dataTask;
@@ -138,70 +136,70 @@
             if (request.requestModel.resumableDownloadPath) {
                 // add parameters to URL;
                 NSString *filteredUrl = [NBNetworkPrivate urlStringWithOriginUrlString:url appendParameters:param];
-
+                
                 NSURLRequest *requestUrl = [NSURLRequest requestWithURL:[NSURL URLWithString:filteredUrl]];
                 __block NSURLSessionDownloadTask *downloadTask = [_manager downloadTaskWithRequest:requestUrl
-                                                                                  progress:nil
-                                                                               destination:^ NSURL * __nonnull(NSURL * __nonnull url, NSURLResponse * __nonnull response) {
-                                                                                   // 将下载文件保存在缓存路径中
-                                                                                   return [NSURL fileURLWithPath:request.requestModel.resumableDownloadPath];
-                                                                               } completionHandler:^ void(NSURLResponse * __nonnull response, NSURL * __nonnull url, NSError * __nonnull error) {
-                                                                                   if (error) {
-                                                                                       [self handleRequestResult:downloadTask request:request error:error];
-                                                                                   } else {
-                                                                                       [self handleRequestResult:downloadTask request:request responseObject:url];
-                                                                                   }
-                                                                               }];
-//                [_manager setDownloadTaskDidWriteDataBlock:^(NSURLSession *session, NSURLSessionDownloadTask *downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
-//                    float downloadPercentage = (float)totalBytesWritten/(float)totalBytesExpectedToWrite;
-//                    NSLog(@"%f",downloadPercentage);
-//                }];
+                                                                                          progress:nil
+                                                                                       destination:^ NSURL * __nonnull(NSURL * __nonnull url, NSURLResponse * __nonnull response) {
+                                                                                           // 将下载文件保存在缓存路径中
+                                                                                           return [NSURL fileURLWithPath:request.requestModel.resumableDownloadPath];
+                                                                                       } completionHandler:^ void(NSURLResponse * __nonnull response, NSURL * __nonnull url, NSError * __nonnull error) {
+                                                                                           if (error) {
+                                                                                               [wself handleRequestResult:downloadTask request:request error:error];
+                                                                                           } else {
+                                                                                               [wself handleRequestResult:downloadTask request:request responseObject:url];
+                                                                                           }
+                                                                                       }];
+                //                [_manager setDownloadTaskDidWriteDataBlock:^(NSURLSession *session, NSURLSessionDownloadTask *downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
+                //                    float downloadPercentage = (float)totalBytesWritten/(float)totalBytesExpectedToWrite;
+                //                    NSLog(@"%f",downloadPercentage);
+                //                }];
                 request.sessionTask = downloadTask;
             } else {
                 request.sessionTask = [_manager GET:url parameters:param progress:nil success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
-                    [self handleRequestResult:task request:request responseObject:responseObject];
+                    [wself handleRequestResult:task request:request responseObject:responseObject];
                 } failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
-                    [self handleRequestResult:task request:request error:error];
+                    [wself handleRequestResult:task request:request error:error];
                 }];
             }
         } else if (method == NBNetRequestMethodPost) {
             if (constructingBlock != nil) {
                 request.sessionTask = [_manager POST:url parameters:param constructingBodyWithBlock:constructingBlock progress:nil
-                                                  success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
-                                                      [self handleRequestResult:task request:request responseObject:responseObject];
-                } failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
-                    [self handleRequestResult:task request:request error:error];
-                }];
+                                             success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
+                                                 [wself handleRequestResult:task request:request responseObject:responseObject];
+                                             } failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
+                                                 [wself handleRequestResult:task request:request error:error];
+                                             }];
             } else {
                 request.sessionTask = [_manager POST:url parameters:param progress:nil success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
-                    [self handleRequestResult:task request:request responseObject:responseObject];
+                    [wself handleRequestResult:task request:request responseObject:responseObject];
                 }                                 failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
-                    [self handleRequestResult:task request:request error:error];
+                    [wself handleRequestResult:task request:request error:error];
                 }];
             }
         } else if (method == NBNetRequestMethodHead) {
             request.sessionTask = [_manager HEAD:url parameters:param success:^(NSURLSessionDataTask * __nonnull task) {
-                [self handleRequestResult:task request:request responseObject:nil];
+                [wself handleRequestResult:task request:request responseObject:nil];
             }                                 failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
-                [self handleRequestResult:task request:request error:error];
+                [wself handleRequestResult:task request:request error:error];
             }];
         } else if (method == NBNetRequestMethodPut) {
             request.sessionTask = [_manager PUT:url parameters:param success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
-                [self handleRequestResult:task request:request responseObject:responseObject];
+                [wself handleRequestResult:task request:request responseObject:responseObject];
             }                                failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
-                [self handleRequestResult:task request:request error:error];
+                [wself handleRequestResult:task request:request error:error];
             }];
         } else if (method == NBNetRequestMethodDelete) {
             request.sessionTask = [_manager DELETE:url parameters:param success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
-                [self handleRequestResult:task request:request responseObject:responseObject];
+                [wself handleRequestResult:task request:request responseObject:responseObject];
             }                                   failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
-                [self handleRequestResult:task request:request error:error];
+                [wself handleRequestResult:task request:request error:error];
             }];
         } else if (method == NBNetRequestMethodPatch) {
             request.sessionTask = [_manager PATCH:url parameters:param success:^(NSURLSessionDataTask * __nonnull task, id __nonnull responseObject) {
-                [self handleRequestResult:task request:request responseObject:responseObject];
+                [wself handleRequestResult:task request:request responseObject:responseObject];
             } failure:^(NSURLSessionDataTask * __nonnull task, NSError * __nonnull error) {
-                [self handleRequestResult:task request:request error:error];
+                [wself handleRequestResult:task request:request error:error];
             }];
         } else {
             NBNetRequestLog(@"Error, unsupport method type");
@@ -210,24 +208,33 @@
     }
     //配置优先级
     request.sessionTask.priority = [request.requestModel priority];
-
+    
     // 使用resume方法启动任务
     [request.sessionTask resume];
     NBNetRequestLog(@"Add request: %@", NSStringFromClass([request class]));
-    [self addSessionTask:request];
+    [self addRequestToRecord:request];
 }
 
 - (void)cancelRequest:(NBBaseNetRequest *)request {
     [request.sessionTask cancel];
-    [self removeSessionTask:request.sessionTask];
+    [self removeRequestFromRecord:request];
     [request clearCompletionBlock];
 }
 
 - (void)cancelAllRequests {
-    NSDictionary *copyRecord = [_requestsRecord copy];
-    for (NSString *key in copyRecord) {
-        NBBaseNetRequest *request = copyRecord[key];
-        [request stop];
+    pthread_mutex_lock(&_lock);
+    NSArray *allKeys = [_requestsRecord allKeys];
+    pthread_mutex_unlock(&_lock);
+    if (allKeys && allKeys.count > 0) {
+        NSArray *copiedKeys = [allKeys copy];
+        for (NSNumber *key in copiedKeys) {
+            pthread_mutex_lock(&_lock);
+            NBBaseNetRequest *request = _requestsRecord[key];
+            pthread_mutex_unlock(&_lock);
+            // We are using non-recursive lock.
+            // Do not lock `stop`, otherwise deadlock may occur.
+            [request stop];
+        }
     }
 }
 
@@ -251,11 +258,15 @@
     [self handleRequestResult:task];
 }
 - (void)handleRequestResult:(NSURLSessionTask *)task {
-    NSString *key = [self requestHashKey:task];
-    NBBaseNetRequest *request = _requestsRecord[key];
+    pthread_mutex_lock(&_lock);
+    NBBaseNetRequest *request = _requestsRecord[@(task.taskIdentifier)];
+    pthread_mutex_unlock(&_lock);
+    if (!request) {
+        return;
+    }
     NBNetRequestLog(@"Finished Request: %@", NSStringFromClass([request class]));
-    if (request) {
-        BOOL succeed = [self checkResult:request];
+    BOOL succeed = [self checkResult:request];
+    dispatch_async(dispatch_get_main_queue(), ^{
         if (succeed) {
             [request toggleAccessoriesWillStopCallBack];
             [request requestCompleteFilter];
@@ -268,7 +279,7 @@
             [request toggleAccessoriesDidStopCallBack];
         } else {
             NBNetRequestLog(@"Request %@ failed, status code = %ld",
-                     NSStringFromClass([request class]), (long)request.responseStatusCode);
+                            NSStringFromClass([request class]), (long)request.responseStatusCode);
             [request toggleAccessoriesWillStopCallBack];
             [request requestFailedFilter];
             if (request.delegate != nil) {
@@ -279,32 +290,22 @@
             }
             [request toggleAccessoriesDidStopCallBack];
         }
-    }
-    [self removeSessionTask:task];
-    [request clearCompletionBlock];
+        [self removeRequestFromRecord:request];
+        [request clearCompletionBlock];
+    });
 }
 
-- (NSString *)requestHashKey:(NSURLSessionTask *)task {
-    NSString *key = [NSString stringWithFormat:@"%lu", (unsigned long)[task hash]];
-    return key;
+- (void)addRequestToRecord:(NBBaseNetRequest *)request {
+    pthread_mutex_lock(&_lock);
+    _requestsRecord[@(request.sessionTask.taskIdentifier)] = request;
+    pthread_mutex_unlock(&_lock);
 }
 
-- (void)addSessionTask:(NBBaseNetRequest *)request {
-    if (request.sessionTask != nil) {
-        NSString *key = [self requestHashKey:request.sessionTask];
-        @synchronized(self) {
-            _requestsRecord[key] = request;
-        }
-    }
+- (void)removeRequestFromRecord:(NBBaseNetRequest *)request {
+    pthread_mutex_lock(&_lock);
+    [_requestsRecord removeObjectForKey:@(request.sessionTask.taskIdentifier)];
+    NBNetRequestLog(@"Request queue size = %d", [_requestsRecord count]);
+    pthread_mutex_unlock(&_lock);
 }
-
-- (void)removeSessionTask:(NSURLSessionTask *)task {
-    NSString *key = [self requestHashKey:task];
-    @synchronized(self) {
-        [_requestsRecord removeObjectForKey:key];
-    }
-    NBNetRequestLog(@"Request queue size = %lu", (unsigned long)[_requestsRecord count]);
-}
-
 
 @end

@@ -41,6 +41,7 @@ FOUNDATION_EXPORT void NBNetRequestLog(NSString *format, ...) NS_FORMAT_FUNCTION
 
 + (NSString *)appVersionString;
 
++ (NSStringEncoding)stringEncodingWithRequest:(NBBaseNetRequest *)request;
 @end
 
 @interface NBBaseNetRequest (RequestAccessory)

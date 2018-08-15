@@ -110,6 +110,18 @@ void NBNetRequestLog(NSString *format, ...) {
     }
 }
 
++ (NSStringEncoding)stringEncodingWithRequest:(NBBaseNetRequest *)request {
+    // From AFNetworking 2.6.3
+    NSStringEncoding stringEncoding = NSUTF8StringEncoding;
+    if (request.response.textEncodingName) {
+        CFStringEncoding encoding = CFStringConvertIANACharSetNameToEncoding((CFStringRef)request.response.textEncodingName);
+        if (encoding != kCFStringEncodingInvalidId) {
+            stringEncoding = CFStringConvertEncodingToNSStringEncoding(encoding);
+        }
+    }
+    return stringEncoding;
+}
+
 
 + (NSString*)urlEncode:(NSString*)str {
     //different library use slightly different escaped and unescaped set.
@@ -131,17 +143,17 @@ void NBNetRequestLog(NSString *format, ...) {
 + (NSString *)md5StringFromString:(NSString *)string {
     if(string == nil || [string length] == 0)
         return nil;
-
+    
     const char *value = [string UTF8String];
-
+    
     unsigned char outputBuffer[CC_MD5_DIGEST_LENGTH];
     CC_MD5(value, (CC_LONG)strlen(value), outputBuffer);
-
+    
     NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     for(NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++){
         [outputString appendFormat:@"%02x",outputBuffer[count]];
     }
-
+    
     return outputString;
 }
 

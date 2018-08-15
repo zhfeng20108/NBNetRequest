@@ -58,6 +58,7 @@
 @property (nonatomic, strong) NSDictionary *userInfo;
 
 @property (nonatomic, strong) NSURLSessionTask *sessionTask;
+@property (nonatomic, strong, readonly) NSHTTPURLResponse *response;
 
 /// request delegate object
 @property (nonatomic, weak) id<NBNetRequestDelegate> delegate;

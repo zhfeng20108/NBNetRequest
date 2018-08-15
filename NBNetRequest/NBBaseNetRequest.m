@@ -38,6 +38,9 @@
     BOOL _dataFromCache;
 }
 
+- (NSHTTPURLResponse *)response {
+    return (NSHTTPURLResponse *)self.sessionTask.response;
+}
 
 /// for subclasses to overwrite
 - (void)requestCompleteFilter {
@@ -81,7 +84,7 @@
         [self toggleAccessoriesDidStopCallBack];
         
         [self clearCompletionBlock];
-
+        
         return;
     }
     
